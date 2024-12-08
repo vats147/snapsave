@@ -9,7 +9,8 @@ export const getTimedFilename = (name: string, ext: string) => {
   const timeStamp = Math.floor(Date.now() / 1000).toString();
   return `${name}-${timeStamp}.${ext}`;
 };
-export async function downloadFile(url: string, filename: string) {
+
+export async function downloadFile(url: string, filename: string): Promise<void> {
   try {
     console.log(filename);
     const response = await fetch(url, { mode: 'cors' });
@@ -21,12 +22,11 @@ export async function downloadFile(url: string, filename: string) {
 
     const a = document.createElement('a');
     a.href = blobUrl;
-    a.download = filename?.filename || 'file';
+    a.download = filename || 'file';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
 
-    // Revoke the Blob URL after download
     window.URL.revokeObjectURL(blobUrl);
   } catch (error) {
     console.error('Download failed', error);

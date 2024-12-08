@@ -20,6 +20,7 @@ import { downloadFile } from "@/lib/utils";
 import { getHttpErrorMessage } from "@/lib/http";
 import { useVideoInfo } from "@/services/api/queries";
 
+// Define the form schema
 const formSchema = z.object({
   postUrl: z.string().url({
     message: "Provide a valid Instagram post link",
@@ -60,10 +61,11 @@ export function InstagramVideoForm() {
       localStorage.setItem("autoDownload", JSON.stringify(autoDownload));
 
       setPreviewUrl(videoUrl);
-      setTempFileName(filename?.filename);
+      setTempFileName(filename); // Just store the filename string
 
+      // If autoDownload is enabled, immediately download using a string filename
       if (autoDownload) {
-        downloadFile(videoUrl, { filename });
+        downloadFile(videoUrl, filename);
       }
     } catch (error: any) {
       console.error(error);
@@ -93,7 +95,7 @@ export function InstagramVideoForm() {
           <div className="mb-2 h-6 w-full px-2 text-start text-red-500">
             {httpError}
           </div>
-          
+
           <div className="mb-6 w-full flex items-center gap-2">
             <FormField
               control={form.control}
@@ -175,7 +177,8 @@ export function InstagramVideoForm() {
               className="w-full h-auto mb-4"
             />
             <Button
-              onClick={() => downloadFile(previewUrl, { filename: tempfilename ?? "video.mp4" })}
+              // Pass the filename as a string directly, not as an object
+              onClick={() => downloadFile(previewUrl, tempfilename ?? "video.mp4")}
               className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded"
             >
               Download
