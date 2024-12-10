@@ -1,5 +1,8 @@
+// pages/index.tsx
+
 import Head from "next/head";
 import { InstagramVideoForm } from "@/components/features/instagram/components/form";
+import Script from 'next/script';
 
 export default function HomePage() {
   return (
@@ -35,6 +38,28 @@ export default function HomePage() {
           content="summary_large_image"
         />
       </Head>
+
+      {/* Google Analytics Scripts */}
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-TC7D9FC5PL"
+      />
+      <Script
+        id="ga-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-TC7D9FC5PL', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
+
       <div className="flex flex-col py-8">
         <h1 className="text-balance mb-8 text-center text-4xl font-extrabold">
           Instagram Video Downloader
