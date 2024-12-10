@@ -90,26 +90,6 @@ export default function HomePage() {
           <InstagramVideoForm />
         </section>
 
-        {/* SEO-Friendly Section */}
-        <section className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 mb-4">
-            Free Instagram reel Downloader
-          </h2>
-          <p className="text-gray-600 mb-4">
-            Our Instagram Video Downloader allows you to save your favorite Instagram reels and videos directly to your device with just a few clicks. Whether you want to keep memories, save inspiring content, or share reels offline, our tool makes the process seamless and user-friendly.
-          </p>
-          <h3 className="text-xl md:text-2xl font-medium text-gray-700 mb-2">
-            Features:
-          </h3>
-          <ul className="list-disc list-inside text-gray-600">
-            <li>Fast and reliable downloads</li>
-            <li>No registration required</li>
-            <li>Supports high-definition videos</li>
-            <li>Easy-to-use interface</li>
-            <li>Completely free to use</li>
-          </ul>
-        </section>
-
         {/* 3-Step Process Section */}
         <section className="mb-12">
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 mb-6">
@@ -150,6 +130,28 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* SEO-Friendly Section */}
+        <section className="mb-12">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 mb-4">
+            Free Instagram reel Downloader
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Our Instagram Video Downloader allows you to save your favorite Instagram reels and videos directly to your device with just a few clicks. Whether you want to keep memories, save inspiring content, or share reels offline, our tool makes the process seamless and user-friendly.
+          </p>
+          <h3 className="text-xl md:text-2xl font-medium text-gray-700 mb-2">
+            Features:
+          </h3>
+          <ul className="list-disc list-inside text-gray-600">
+            <li>Fast and reliable downloads</li>
+            <li>No registration required</li>
+            <li>Supports high-definition videos</li>
+            <li>Easy-to-use interface</li>
+            <li>Completely free to use</li>
+          </ul>
+        </section>
+
+        
 
         {/* FAQ Section */}
         <section className="mb-12">
