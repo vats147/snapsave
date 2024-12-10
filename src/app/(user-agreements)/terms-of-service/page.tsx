@@ -9,7 +9,7 @@ const TermsOfServicePage = () => {
           (ToS) governs your use of the website
           <span className="text-gray-900 dark:text-gray-500">
             {" "}
-            (insta-video-saver.vercel.app).
+            (snapsave.tech).
           </span>{" "}
           By using the Website or Service, you agree to be bound by the terms
           and conditions set forth in this ToS.
