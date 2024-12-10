@@ -38,7 +38,7 @@ export default function HomePage() {
         {/* Viewport Meta Tag for Responsive Design */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <meta name="google-adsense-account" content="ca-pub-2870431461491472"></meta>
+        <meta name="google-adsense-account" content="ca-pub-2870431461491472"/>
 
         {/* Structured Data (JSON-LD) for SEO */}
         <script
