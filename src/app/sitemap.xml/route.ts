@@ -8,6 +8,16 @@ export async function GET() {
       <lastmod>2024-12-08T00:00:00+01:00</lastmod>
       <priority>1.0</priority>
     </url>
+    <url>
+      <loc>https://www.snapsave.tech/privacy-policy</loc>
+      <lastmod>2024-12-08T00:00:00+01:00</lastmod>
+      <priority>1.0</priority>
+    </url>
+    <url>
+      <loc>https://www.snapsave.tech/terms-of-service</loc>
+      <lastmod>2024-12-08T00:00:00+01:00</lastmod>
+      <priority>1.0</priority>
+    </url>
     <!-- Add more URLs as needed -->
   </urlset>`;
 
