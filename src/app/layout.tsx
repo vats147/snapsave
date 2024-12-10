@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 import { ReactQueryProvider } from "@/components/providers/react-query-provider";
 
 import { cn } from "@/lib/utils";
-
+import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 
 const fontSans = FontSans({
@@ -39,6 +39,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Analytics/>
           <ReactQueryProvider>
             <Navbar />
             <main className="relative h-[calc(100vh-6rem)] overflow-y-auto px-2 sm:px-4">
