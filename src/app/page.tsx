@@ -40,6 +40,11 @@ export default function HomePage() {
 
         <meta name="google-adsense-account" content="ca-pub-2870431461491472"/>
 
+        {/* Adsense code snippet */}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2870431461491472"
+     crossOrigin="anonymous" />
+
+        
         {/* Structured Data (JSON-LD) for SEO */}
         <script
           type="application/ld+json"
